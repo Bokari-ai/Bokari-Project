@@ -1,3 +1,5 @@
+import BrandLogo from './BrandLogo';
+
 export default function Footer() {
   return (
     <footer>
@@ -5,7 +7,7 @@ export default function Footer() {
         <div className="foot-grid">
           <div className="foot-brand">
             <a href="#top" className="brand" aria-label="Bokari home">
-              <img src="/logo.svg" alt="Bokari" height="28" style={{ height: 28, width: 'auto' }} />
+              <BrandLogo height={28} />
             </a>
             <p>AI Voicebot for Hospitality — by Botnoi Group. Answering every call, in every language, around the clock.</p>
           </div>
