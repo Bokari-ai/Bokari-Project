@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { SunIcon, MoonIcon } from '@phosphor-icons/react';
 
 export default function ThemeToggle() {
   const [dark, setDark] = useState(true);
@@ -38,7 +39,7 @@ export default function ThemeToggle() {
         transition: 'background 0.2s, border-color 0.2s',
       }}
     >
-      {dark ? '☀' : '☾'}
+      {dark ? <SunIcon size={18} /> : <MoonIcon size={18} />}
     </button>
   );
 }

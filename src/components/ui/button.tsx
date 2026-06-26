@@ -19,6 +19,10 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
+        gold:
+          "bg-linear-to-b from-(--color-gold-br) to-(--color-gold) text-[#2A1E05] font-semibold shadow-[0_1px_0_rgba(255,255,255,0.35)_inset,0_10px_30px_-10px_rgba(230,185,86,0.55)] hover:-translate-y-0.5 hover:shadow-[0_1px_0_rgba(255,255,255,0.4)_inset,0_16px_38px_-10px_rgba(230,185,86,0.7)] focus-visible:ring-[var(--color-gold)]/40",
+        "ghost-bokari":
+          "bg-white/[0.03] text-(--color-ink) border border-(--line-2) backdrop-blur-sm hover:border-[rgba(91,147,255,0.6)] hover:text-white hover:bg-[rgba(59,123,255,0.08)]",
       },
       size: {
         default:

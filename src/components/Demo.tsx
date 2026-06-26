@@ -1,23 +1,22 @@
 'use client';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faMessage, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { PhoneIcon, ChatTextIcon, StackIcon } from '@phosphor-icons/react';
+import type { Icon } from '@phosphor-icons/react';
 
-const features: { icon: IconDefinition; h4: string; p: string; d: string }[] = [
+const features: { icon: Icon; h4: string; p: string; d: string }[] = [
   {
-    icon: faPhone,
+    icon: PhoneIcon,
     h4: 'Voice — answers every call',
     p: 'Never miss an after-hours call. Bokari picks up every time, qualifies the enquiry, and closes the booking.',
     d: '2',
   },
   {
-    icon: faMessage,
+    icon: ChatTextIcon,
     h4: 'Chat — all channels, one AI',
     p: 'Website, LINE, WhatsApp, Messenger. Bokari replies in seconds and guides guests through the full booking flow.',
     d: '3',
   },
   {
-    icon: faLayerGroup,
+    icon: StackIcon,
     h4: 'Unified — one platform, every channel',
     p: 'All conversations, bookings, and analytics in one dashboard. No silos, no manual syncing.',
     d: '4',
@@ -38,7 +37,7 @@ export default function Demo() {
             {features.map(feat => (
               <div key={feat.h4} className="feat reveal" data-d={feat.d}>
                 <span className="fic">
-                  <FontAwesomeIcon icon={feat.icon} />
+                  <feat.icon size={22} />
                 </span>
                 <div><h4>{feat.h4}</h4><p>{feat.p}</p></div>
               </div>

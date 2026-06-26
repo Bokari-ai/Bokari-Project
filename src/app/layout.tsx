@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const dmSans = DM_Sans({subsets:['latin'],variable:'--font-sans'});
 
-
-config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "Bokari — AI Voicebot for Hospitality",

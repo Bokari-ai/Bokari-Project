@@ -1,0 +1,51 @@
+/* ============ HERO ============ */
+.hero {
+  position: relative; overflow: hidden;
+  min-height: 100svh;
+  display: flex; align-items: center;
+  padding-top: calc(var(--nav-h) + clamp(40px, 6vw, 80px));
+  padding-bottom: clamp(60px, 8vw, 100px);
+  text-align: center;
+  isolation: isolate;
+}
+.hero-cols { position: absolute; inset: 0; z-index: -1; pointer-events: none; display: flex; }
+.hero-col {
+  flex: 1;
+  background: linear-gradient(270deg, rgba(255,255,255,0.01) 0%, rgba(0,0,0,0.12) 76.04%, rgba(255,255,255,0.01) 100%);
+  mix-blend-mode: overlay;
+  backdrop-filter: blur(90px);
+  -webkit-backdrop-filter: blur(45px);
+}
+.hero-in { position: relative; z-index: 1; max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+@media (max-width: 600px) {
+  .hero-ctas { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+}
+.hero h1 {
+  margin: 28px 0 0;
+  font-size: clamp(46px, 8.4vw, 104px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--color-ink);
+}
+.hero h1 .serif { font-weight: 500; letter-spacing: -0.015em; }
+.hero-sub {
+  margin: 26px auto 0; max-width: 60ch;
+  font-size: clamp(16px, 1.7vw, 19px);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+}
+.hero-ctas { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.hero-proof {
+  margin-top: 54px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 14px 26px;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.03em;
+  color: var(--color-text-sub);
+}
+.hero-proof .it { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.hero-proof .it b { color: var(--color-ink); font-weight: 500; }
+.hero-proof .sep { width: 4px; height: 4px; border-radius: 50%; background: rgba(147,164,194,0.4); }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #43E08A; box-shadow: 0 0 0 0 rgba(67,224,138,0.6); animation: ping 1.8s ease-out infinite; }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(67,224,138,0.6); } 70% { box-shadow: 0 0 0 7px rgba(67,224,138,0); } 100% { box-shadow: 0 0 0 0 rgba(67,224,138,0); } }

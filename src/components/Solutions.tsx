@@ -1,54 +1,46 @@
 'use client';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faMicrophone,
-  faComments,
-  faCalendarCheck,
-  faArrowsRotate,
-  faGlobe,
-  faChartLine,
-} from '@fortawesome/free-solid-svg-icons';
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { MicrophoneIcon, ChatsCircleIcon, CalendarCheckIcon, ArrowsClockwiseIcon, GlobeIcon, ChartLineUpIcon } from '@phosphor-icons/react';
+import type { Icon } from '@phosphor-icons/react';
 
-const cards: { num: string; icon: IconDefinition; h3: string; p: string; tags: string[] }[] = [
+const cards: { num: string; icon: Icon; h3: string; p: string; tags: string[] }[] = [
   {
     num: '01',
-    icon: faMicrophone,
+    icon: MicrophoneIcon,
     h3: 'AI Voicebot',
     p: 'Answers every inbound call, handles availability checks, and confirms reservations in natural conversation — in Thai, English, Chinese, Japanese, and more.',
     tags: ['inbound', 'availability', 'confirm'],
   },
   {
     num: '02',
-    icon: faComments,
+    icon: ChatsCircleIcon,
     h3: 'AI Chatbot',
     p: 'Instant responses on LINE OA, WhatsApp, and Messenger. Handles availability checks and booking confirmations the moment a guest messages.',
     tags: ['LINE', 'WhatsApp', 'Messenger'],
   },
   {
     num: '03',
-    icon: faCalendarCheck,
+    icon: CalendarCheckIcon,
     h3: 'Smart Booking Flow',
     p: 'Room selection, dates, add-ons, and payment — all conversationally. No forms, no redirects, no drop-offs.',
     tags: ['no forms', 'payment', 'add-ons'],
   },
   {
     num: '04',
-    icon: faArrowsRotate,
+    icon: ArrowsClockwiseIcon,
     h3: 'PMS Integration',
     p: 'Real-time sync with your Property Management System. Every booking appears instantly in your PMS — no double entry, no risk.',
     tags: ['real-time', 'two-way sync'],
   },
   {
     num: '05',
-    icon: faGlobe,
+    icon: GlobeIcon,
     h3: '40+ Languages',
     p: 'Guests from Thailand, China, Japan, Korea, Europe — Bokari speaks their language fluently and switches automatically mid-conversation.',
     tags: ['TH', 'EN', 'ZH', 'JP', '+36'],
   },
   {
     num: '06',
-    icon: faChartLine,
+    icon: ChartLineUpIcon,
     h3: 'Booking Analytics',
     p: 'Full visibility into every conversation and conversion. Track peak demand, common objections, and revenue won — all in one dashboard.',
     tags: ['demand', 'conversion', 'revenue'],
@@ -73,7 +65,7 @@ export default function Solutions() {
             <article key={card.num} className="card reveal" data-d={String((i % 3) + 1)}>
               <span className="num">{card.num}</span>
               <span className="ic">
-                <FontAwesomeIcon icon={card.icon} />
+                <card.icon size={22} />
               </span>
               <h3>{card.h3}</h3>
               <p>{card.p}</p>

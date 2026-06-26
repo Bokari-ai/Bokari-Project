@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 import BrandLogo from './BrandLogo';
+import { Button } from '@/components/ui/button';
 
 export default function Nav() {
   useEffect(() => {
@@ -15,18 +16,20 @@ export default function Nav() {
   return (
     <nav className="nav" id="nav">
       <div className="nav-in">
-        <a href="#top" className="brand" aria-label="Bokari home">
+        <a href="/" className="brand" aria-label="Bokari home">
           <BrandLogo height={32} />
         </a>
         <div className="nav-links">
-          <a href="#solutions">Solutions</a>
-          <a href="#demo">Product Demo</a>
-          <a href="#trust">Trust</a>
+          <a href="/#solutions">Solutions</a>
+          <a href="/#demo">Product Demo</a>
+          <a href="/#trust">Trust</a>
         </div>
         <div className="nav-right">
           <ThemeToggle />
-          <a href="#" className="nav-login">Login</a>
-          <a href="#cta" className="btn btn-gold btn-sm">Book a Demo</a>
+          <a href="/login" className="nav-login">Login</a>
+          <Button variant="gold" size="sm" asChild>
+            <a href="/contact">Book a Demo</a>
+          </Button>
         </div>
       </div>
     </nav>
