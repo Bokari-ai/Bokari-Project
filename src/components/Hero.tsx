@@ -18,10 +18,10 @@ export default function Hero() {
           Bokari answers calls, replies to chats, and confirms reservations 24/7 in 40+ languages — so your team can focus on the guests in front of them.
         </p>
         <div className="hero-ctas reveal in" data-d="3">
-          <Button variant="gold" size="lg" asChild>
+          <Button variant="gold" asChild>
             <a href="/contact">Book a Demo <span className="arrow"><ArrowRightIcon size={16} /></span></a>
           </Button>
-          <Button variant="ghost-bokari" size="lg" asChild>
+          <Button variant="ghost-bokari" asChild>
             <a href="/#demo"><span className="play"><PlayIcon size={10} weight="fill" /></span> See it in action</a>
           </Button>
         </div>

@@ -11,7 +11,7 @@ export default function Cta() {
         <h2 className="reveal" data-d="1">Let an AI answer <span className="serif gold">every</span> call.</h2>
         <p className="reveal" data-d="2">Run a paid pilot at 1–3 properties for 60 days. At the end: real call data from your own properties. Your overnight revenue, your number — not ours.</p>
         <div className="reveal" data-d="3" style={{ marginTop: 6 }}>
-          <Button variant="gold" size="lg" asChild>
+          <Button variant="gold" asChild>
             <a href="/contact">Book a 30-min scoping call <span className="arrow"><ArrowRightIcon size={16} /></span></a>
           </Button>
         </div>
