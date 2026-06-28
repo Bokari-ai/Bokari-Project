@@ -12,7 +12,7 @@ export interface LeadPayload {
 
 async function sendEmail(lead: LeadPayload) {
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.RESEND_FROM_EMAIL ?? 'leads@bokari.ai';
+  const from = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev';
   const to = process.env.LEAD_NOTIFICATION_EMAIL ?? 'bokari@botnoigroup.com';
 
   if (!apiKey || apiKey.startsWith('re_xxx')) return;
@@ -96,11 +96,15 @@ export async function POST(req: NextRequest) {
     appendToSheet(lead),
   ]);
 
-  if (process.env.NODE_ENV === 'development') {
-    console.log('[leads] new submission', lead);
-    if (emailResult.status === 'rejected') console.error('[leads] email error', emailResult.reason);
-    if (sheetResult.status === 'rejected') console.error('[leads] sheet error', sheetResult.reason);
-  }
+  const emailError = emailResult.status === 'rejected' ? String(emailResult.reason) : null;
+  const sheetError = sheetResult.status === 'rejected' ? String(sheetResult.reason) : null;
 
-  return NextResponse.json({ success: true });
+  console.log('[leads] new submission', lead);
+  if (emailError) console.error('[leads] email error', emailError);
+  if (sheetError) console.error('[leads] sheet error', sheetError);
+
+  return NextResponse.json({
+    success: true,
+    debug: { email: emailError ?? 'ok', sheet: sheetError ?? 'ok' },
+  });
 }

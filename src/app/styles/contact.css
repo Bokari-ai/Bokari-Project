@@ -80,6 +80,9 @@
   gap: 6px;
   margin-bottom: 16px;
 }
+.form-field [data-slot="select-trigger"] {
+  width: 100%;
+}
 
 .form-label {
   font-size: 13px;

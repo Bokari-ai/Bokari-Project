@@ -156,7 +156,7 @@ export default function ContactPage() {
                   <div className="form-row">
                     <Field label="Number of Properties" required error={errors.propertyCount}>
                       <Select value={form.propertyCount} onValueChange={set('propertyCount')}>
-                        <SelectTrigger aria-invalid={!!errors.propertyCount}>
+                        <SelectTrigger className="w-full" aria-invalid={!!errors.propertyCount}>
                           <SelectValue placeholder="Select…" />
                         </SelectTrigger>
                         <SelectContent>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                     </Field>
                     <Field label="Monthly Call Volume" required error={errors.monthlyCallVolume}>
                       <Select value={form.monthlyCallVolume} onValueChange={set('monthlyCallVolume')}>
-                        <SelectTrigger aria-invalid={!!errors.monthlyCallVolume}>
+                        <SelectTrigger className="w-full" aria-invalid={!!errors.monthlyCallVolume}>
                           <SelectValue placeholder="Select…" />
                         </SelectTrigger>
                         <SelectContent>
